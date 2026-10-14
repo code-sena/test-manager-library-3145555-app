@@ -113,7 +113,7 @@ function App() {
         </a>
         <p className="nav-label">BIBLIOTECA</p>
         <nav aria-label="Secciones de la biblioteca">
-          {views.map(([key, label, icon]) => (
+          {views.filter(([key]) => key !== 'reports' || session.role === 'admin').map(([key, label, icon]) => (
             <button key={key} className={`nav-item ${view === key ? 'nav-active' : ''}`} onClick={() => { setView(key); setNavOpen(false); }}>
               <span className="nav-icon">{icon}</span>{label}
               {key === 'overdue' && <span className="nav-dot" />}
