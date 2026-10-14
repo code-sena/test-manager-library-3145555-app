@@ -1,5 +1,19 @@
 # test-manager-library-3145555-app
 
+## Desarrollo y ejecución
+
+Requiere Node.js 22 o Docker. Para desarrollo local:
+
+```powershell
+npm install
+$env:VITE_API_URL = "http://localhost:8000/api/v1"
+npm run dev
+```
+
+El panel ofrece inicio de sesión, catálogo y búsqueda, socios, préstamos/devoluciones, vencidos y
+el reporte administrativo. El acceso requiere un administrador inicial creado por la API y usa
+exclusivamente sus endpoints HTTP. El build de producción se genera con `npm run build`.
+
 > **Prueba técnica · Ficha ADSO 3145555**
 > Horario: **miércoles 14 de octubre de 2026, de 6:50 a. m. a 11:00 a. m.** (hora Colombia). Entrega a las **11:00 a. m.**
 
